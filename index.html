@@ -11,11 +11,11 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-	<meta property="og:site_name" content="CS@UP Virtual Project Day">
-	<meta property="og:title" content="CS@UP Virtual Project Day 2021" />
+	<meta property="og:site_name" content="CS@UP Project Day">
+	<meta property="og:title" content="CS@UP Project Day 2023" />
 	<meta property="og:description"
 		content="The University of Pretoria's final year Computer Science Projects landing page." />
-	<meta property="og:image" itemprop="image" content="https://cos301-se-2021.github.io/images/UP.png">
+	<meta property="og:image" itemprop="image" content="https://cos301-se-2023.github.io/images/UP.png">
 	<meta property="og:type" content="website" />
 	<link rel="shortcut icon" href="https://www.cs.up.ac.za/images/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="https://www.cs.up.ac.za/images/favicon.ico" type="image/x-icon">
@@ -28,7 +28,7 @@
 
 <body class="is-preload">
 	<!-- <h1 class="center">Please Note: Website under development</h1> -->
-	<img src="images/UP.jpg" width="350" class="up" />
+	<img src="images/UP.png" width="350" class="up" />
 	<h1 class="center"> Department of Computer Science </h1>
 	<h1 class="center"> COS 301 Capstone Project's 2023 Landing Page</h1>
 
@@ -39,11 +39,14 @@
 			<h1><a href="index.html"><strong>CS Project Day</strong> @UP</a></h1>
 			<nav>
 				<ul>
+					<li><a href="#schedule" class="icon solid fa-calendar">Schedule</a></li>
 					<li><a href="#sponsor" class="icon solid fa-trophy">Sponsor's</a></li>
 					<li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
 				</ul>
 			</nav>
 		</header>
+
+	
 		<div id="template" style="display: none">
 			<article class="thumb">
 				<div class="owner"><br /><br />
@@ -77,6 +80,67 @@
 		<div id="main">
 		</div>
 
+		<section class="panel" id="schedule">
+			<h1>Schedule</h1>
+			<table class="table table-striped">
+				<thead class="thead-dark">
+					<tr>
+					<th scope="col" class="font-weight-bolder">Time</th>
+					<th scope="col" class="font-weight-bolder">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">07:30 - 08:30</th>
+						<td class="text-white">Setup (Teams & Sponsors)</td>
+					</tr>
+					<tr>
+						<th scope="row">07:30 - 08:30</th>
+						<td class="text-white">Setup (Teams & Sponsors)</td>
+					</tr>
+					<tr>
+						<th scope="row">07:30 - 08:30</th>
+						<td class="text-white">Setup (Teams & Sponsors)</td>
+					</tr>
+					<tr>
+						<th scope="row">07:30 - 08:30</th>
+						<td class="text-white">Setup (Teams & Sponsors)</td>
+					</tr>
+					<tr>
+						<th scope="row">07:30 - 08:30</th>
+						<td class="text-white">Setup (Teams & Sponsors)</td>
+					</tr>
+					<tr>
+						<th scope="row">07:30 - 08:30</th>
+						<td class="text-white">Setup (Teams & Sponsors)</td>
+					</tr>
+				</tbody>
+			</table>
+				
+				
+			<h1>Stands</h1>
+	
+			<table class="table table-striped">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col" class="font-weight-bolder">Team Name</th>
+						<th scope="col" class="font-weight-bolder">Project Title</th>
+						<th scope="col" class="font-weight-bolder">Stand Number</th>
+					</tr>
+				</thead>
+				
+				<tbody id="stands">
+					
+					<tr id="tempstand" style="display: none">
+						<th scope="row" class="team"></th>
+						<td class="text-white project"></td>
+						<td class="text-white standNum"></td>
+					</tr>
+			</tbody>
+			</table>
+			<img src="images/hall.png" alt="hall layout" class="img-thumbnail">
+		</section>
+
 		<section class="panel" id="sponsor">
 			<h1>Sponsor's</h1>
 			<h2 class="center">We would like to thank our Sponsors for this years prizes. Thank you for your continued
@@ -88,6 +152,7 @@
 						<a href="https://entelect.co.za" target="_blank">
 							<img src="images/sponsors/entelect1.png" class="card-img-top img-responsive" alt="...">
 						</a>
+						<p class="card-text">Some description about the prize</p>
 					</div>
 					<div class="card-footer">
 						<p class="card-text"><span><i class="icon solid fa-building"></i><br /> Architectural
@@ -141,17 +206,6 @@
 						</p>
 					</div>
 				</div>
-				<!--<div class="card" style="width: 18rem;">
-					<div class="card-body">
-						<a href="https://qode.healthcare/" target="_blank">
-							<img src="images/sponsors/qode.png" class="card-img-top img-responsive" alt="...">
-						</a>
-					</div>
-					<div class="card-footer">
-						<p class="card-text"><span><i class="icon solid fa-bars"></i><br /> Tripple Bottom Line </span>
-						</p>
-					</div>
-				</div>-->
 				<div class="card" style="width: 18rem;">
 					<div class="card-body">
 						<a href="https://retrorabbit.co.za/" target="_blank">
@@ -184,7 +238,7 @@
 			<div class="inner split">
 				<div>
 					<section>
-						<img src="images/UP.png" />
+						<img src="images/UP.png" width="250"/>
 						<h2>Computer Science Project Day</h2>
 						<p>Project Day is all about showcasing the final year Computer Science projects that
 							students have worked tirelessly on.</p>
@@ -197,7 +251,7 @@
 							<p>Ms. Stacey Baror (<a
 									href="mailto:stacey.baror@cs.up.ac.za?subject=Project Day 2021">stacey.baror@cs.up.ac.za</a>)
 							</p>
-							 
+							
 						</div>
 					</section>
 				</div>
@@ -212,7 +266,20 @@
 		var org = "COS301-SE-2023";
 		var projects = [
 			{
-				"name": "Project Name",
+				"name": "Project Name 1",
+				"team": "Team Name",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.",
+				"logo": "images/UP.png",
+				"github": "https://github.com/COS301-SE-2023/", // The project name gets appended here and fills spaces with "-"
+				"email": "mailto:email@address.com",
+				"website": "#",
+				"video": "#",
+				"client": "Client Name",
+				"client_logo": "images/UP.png",
+				"stand": "1"
+			},
+			{
+				"name": "Project Name 2",
 				"team": "Team Name",
 				"description": "Project Description",
 				"logo": "images/UP.png",
@@ -221,17 +288,19 @@
 				"website": "#",
 				"video": "#",
 				"client": "Client Name",
-				"client_logo": "images/UP.png"
-			},
-			 
+				"client_logo": "images/UP.png",
+				"stand": "1"
+			}
+			// Add more here
 		];
 
 
 		// **********
 		// Logic
-		// **********
-
+		// ********** 
 		var template = $("#template");
+		var stands = $("#tempstand");
+
 		for (var i = 0; i < projects.length; i++) {
 			template.find(".name").html(projects[i].name);
 			template.find(".team").html(projects[i].team);
@@ -257,6 +326,12 @@
 			template.find(".client_org").html("Product Owner: " + projects[i].client);
 			template.find(".client").attr("src", projects[i].client_logo);
 			$("#main").append(template.html());
+			
+			stands.find(".team").html(projects[i].team);
+			stands.find(".project").html(projects[i].name);
+			stands.find(".standNum").html(projects[i].stand);
+			$("#stands").append("<tr>"+stands.html()+"</tr>"); 
+			
 		}
 
 		$("a").on("click", function (event) {
@@ -264,23 +339,7 @@
 				event.preventDefault();
 			}
 		});
-		// var d = [];
-		// $("article").each(function (i) {
-		// 	var tmp = {
-		// 		name: $(this).find("h2").last().html().split("<")[0].trim(),
-		// 		team: $(this).find(".team").html(),
-		// 		description: $(this).find("p").html(),
-		// 		logo: $(this).find(".image").attr("href"),
-		// 		github: "https://github.com/" + org + "/",
-		// 		email: $(this).find(".fa-envelope").attr("href"),
-		// 		website: $(this).find(".fa-globe-africa").attr("href"),
-		// 		video: $(this).find(".fa-youtube").attr("href"),
-		// 		client: $(this).find(".client").attr("alt"),
-		// 		client_logo: $(this).find(".client").attr("src")
-		// 	}
-		// 	d.push(tmp);
-		// });
-		// console.log(d);
+	
 
 	</script>
 

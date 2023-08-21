@@ -254,9 +254,11 @@
 				onPopupClose: function() { $body.removeClass('modal-active'); },
 				onPopupOpen: function() { $body.addClass('modal-active'); },
 				overlayOpacity: 0,
-				popupCloserText: '',
-				popupHeight: 150,
-				popupLoaderText: '',
+				popupCloserText: 'Close',
+				// popupHeight: 150,
+				
+				baseZIndex: 99999,
+				popupLoaderText: 'Loading',
 				popupSpeed: 300,
 				popupWidth: 150,
 				selector: '.thumb > a.image',
@@ -266,7 +268,8 @@
 				usePopupForceClose: true,
 				usePopupLoader: true,
 				usePopupNav: true,
-				windowMargin: 50,
+				windowMargin: 10,
+				useBodyOverflow: false
 				
 				
 			});
