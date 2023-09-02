@@ -50,14 +50,19 @@
 		<div id="template" style="display: none">
 			<article class="thumb">
 				<div class="owner"><br /><br />
-					<h2 data-toggle="tooltip" data-placement="left" title="" class="client_org">Product Owner: </h2><img
-						src="#" alt="#" class="client" />
+					<h2 data-toggle="tooltip" data-placement="left" title="" class="client_org">Product Owner: </h2>
+					<img src="#" alt="#" class="client" />
 				</div>
-				<a href="#" class="image logo_link"><img src="#" alt="" class="logo" /></a>
+				<a href="#" class="image logo_link">
+					<img src="#" alt="" class="logo" />
+		
+				</a>
+				
 				<br />
 				<h2> <span class="name"></span> <br />
 					By <span class="team"></span></h2>
-				<p class="description"></p>
+				<p class="description">
+				</p>
 				<ul class="icons center margin-fix">
 					<li><a href="#" target="_blank" class="icon brands fa-github" data-toggle="tooltip"
 							data-placement="left" title="GitHub Link"><span class="label">GitHub
@@ -268,6 +273,7 @@
 			{
 				"name": "Project Name 1",
 				"team": "Team Name",
+				"team_photo": "images/hall.png",
 				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.",
 				"logo": "images/UP.png",
 				"github": "https://github.com/COS301-SE-2023/", // The project name gets appended here and fills spaces with "-"
@@ -275,12 +281,13 @@
 				"website": "#",
 				"video": "#",
 				"client": "Client Name",
-				"client_logo": "images/UP.png",
+				"client_logo": "images/clients/UP.png",
 				"stand": "1"
 			},
 			{
 				"name": "Project Name 2",
 				"team": "Team Name",
+				"team_photo": "images/hall.png",
 				"description": "Project Description",
 				"logo": "images/UP.png",
 				"github": "https://github.com/COS301-SE-2023/", // The project name gets appended here and fills spaces with "-"
@@ -288,7 +295,7 @@
 				"website": "#",
 				"video": "#",
 				"client": "Client Name",
-				"client_logo": "images/UP.png",
+				"client_logo": "images/clients/UP.png",
 				"stand": "1"
 			}
 			// Add more here
@@ -304,9 +311,10 @@
 		for (var i = 0; i < projects.length; i++) {
 			template.find(".name").html(projects[i].name);
 			template.find(".team").html(projects[i].team);
+			
 			template.find(".description").html(projects[i].description);
 			template.find(".logo").attr("src", projects[i].logo);
-			template.find(".logo_link").attr("href", projects[i].logo);
+			template.find(".logo_link").attr("href", projects[i].team_photo);
 			template.find(".fa-github").attr("href", projects[i].github + projects[i].name.replaceAll(" ", "-"));
 			template.find(".fa-envelope").attr("href", projects[i].email);
 			if (projects[i].website !== "#") {

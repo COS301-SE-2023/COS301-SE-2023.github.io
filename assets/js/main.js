@@ -225,6 +225,7 @@
 				// <img> (which is then hidden). Gives us way more flexibility.
 
 					// Set background.
+					
 						$image.css('background-image', 'url(' + $image_img.attr('src') + ')');
 
 					// Set background position.
@@ -233,6 +234,7 @@
 
 					// Hide original img.
 						$image_img.hide();
+					
 
 			});
 
@@ -245,6 +247,7 @@
 
 					$a.nextAll().each(function() {
 						s += this.outerHTML;
+						
 					});
 
 					return s;
