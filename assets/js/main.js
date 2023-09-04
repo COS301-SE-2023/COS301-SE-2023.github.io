@@ -236,6 +236,12 @@
 
 			});
 
+			$(document).ready(function() {
+				$('.logo_link').on("click", (e) => {
+					console.log(e)
+				})
+			});
+
 		// Poptrox.
 			$main.poptrox({
 				baseZIndex: 200,
@@ -251,8 +257,8 @@
 
 				},
 				fadeSpeed: 300,
-				onPopupClose: function() { $body.removeClass('modal-active'); },
-				onPopupOpen: function() { $body.addClass('modal-active'); },
+				onPopupClose: function() { $body.removeClass('modal-active');},
+				onPopupOpen: function() { $body.addClass('modal-active');},
 				overlayOpacity: 0,
 				popupCloserText: 'Close',
 				// popupHeight: 150,

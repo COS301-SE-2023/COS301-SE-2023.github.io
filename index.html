@@ -5,6 +5,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	 
 
 <head>
 	<title>CS Project Day</title>
@@ -55,6 +56,7 @@
 				</div>
 				<a href="#" class="image logo_link"><img src="#" alt="" class="logo" /></a>
 				<br />
+				<!-- <h2><img src="#" alt="" class="team_photo description" /></h2> -->
 				<h2> <span class="name"></span> <br />
 					By <span class="team"></span></h2>
 				<p class="description"></p>
@@ -261,40 +263,14 @@
 
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
 
 	<script>
+		// import {projects} from "./assets/group_infos/csvjson.js"
+
 		var org = "COS301-SE-2023";
-		var projects = [
-			{
-				"name": "Project Name 1",
-				"team": "Team Name",
-				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin posuere nisl in molestie. Donec pellentesque, odio sit amet bibendum condimentum, sem purus pretium purus, vitae finibus ex ipsum sed dolor. Praesent vitae sagittis tortor. Praesent elementum interdum ligula, ut aliquet ligula vestibulum non. Cras aliquam mauris sed dolor tincidunt, sed mattis orci posuere. Mauris nec leo eget nisi convallis dignissim a vel nunc. Donec at faucibus urna. Suspendisse vestibulum, neque a non.",
-				"logo": "images/UP.png",
-				"github": "https://github.com/COS301-SE-2023/", // The project name gets appended here and fills spaces with "-"
-				"email": "mailto:email@address.com",
-				"website": "#",
-				"video": "#",
-				"client": "Client Name",
-				"client_logo": "images/UP.png",
-				"stand": "1"
-			},
-			{
-				"name": "Project Name 2",
-				"team": "Team Name",
-				"description": "Project Description",
-				"logo": "images/UP.png",
-				"github": "https://github.com/COS301-SE-2023/", // The project name gets appended here and fills spaces with "-"
-				"email": "mailto:email@address.com",
-				"website": "#",
-				"video": "#",
-				"client": "Client Name",
-				"client_logo": "images/UP.png",
-				"stand": "1"
-			}
-			// Add more here
-		];
-
-
+		
+		
 		// **********
 		// Logic
 		// ********** 
@@ -305,9 +281,12 @@
 			template.find(".name").html(projects[i].name);
 			template.find(".team").html(projects[i].team);
 			template.find(".description").html(projects[i].description);
-			template.find(".logo").attr("src", projects[i].logo);
-			template.find(".logo_link").attr("href", projects[i].logo);
-			template.find(".fa-github").attr("href", projects[i].github + projects[i].name.replaceAll(" ", "-"));
+			template.find(".logo").attr("src", "images/fulls/"+projects[i].logo+".png");
+			template.find(".logo_link").attr("href", "images/fulls/"+projects[i].logo+".png");
+			template.find(".team_photo").attr("src", "images/team_photos/"+projects[i].logo+".png");
+			// template.find(".team_photo").attr("hidden", "true");
+			// $('.team_photo').attr("hidden", "true");
+			template.find(".fa-github").attr("href", projects[i].github);// + projects[i].name.replaceAll(" ", "-"));
 			template.find(".fa-envelope").attr("href", projects[i].email);
 			if (projects[i].website !== "#") {
 				template.find(".fa-globe-africa").attr("href", projects[i].website);
@@ -324,9 +303,8 @@
 			template.find(".client").attr("alt", projects[i].client);
 			template.find(".client_org").attr("title", projects[i].client);
 			template.find(".client_org").html("Product Owner: " + projects[i].client);
-			template.find(".client").attr("src", projects[i].client_logo);
+			template.find(".client").attr("src", "images/clients/"+projects[i].client_logo+".png");
 			$("#main").append(template.html());
-			
 			stands.find(".team").html(projects[i].team);
 			stands.find(".project").html(projects[i].name);
 			stands.find(".standNum").html(projects[i].stand);
@@ -342,6 +320,7 @@
 	
 
 	</script>
+
 
 	<!--Scripts -->
 
