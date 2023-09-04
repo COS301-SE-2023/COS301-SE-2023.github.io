@@ -51,15 +51,20 @@
 		<div id="template" style="display: none">
 			<article class="thumb">
 				<div class="owner"><br /><br />
-					<h2 data-toggle="tooltip" data-placement="left" title="" class="client_org">Product Owner: </h2><img
-						src="#" alt="#" class="client" />
+					<h2 data-toggle="tooltip" data-placement="left" title="" class="client_org">Product Owner: </h2>
+					<img src="#" alt="#" class="client" />
 				</div>
-				<a href="#" class="image logo_link"><img src="#" alt="" class="logo" /></a>
+				<a href="#" class="image logo_link">
+					<img src="#" alt="" class="logo" />
+		
+				</a>
+				
 				<br />
 				<!-- <h2><img src="#" alt="" class="team_photo description" /></h2> -->
 				<h2> <span class="name"></span> <br />
 					By <span class="team"></span></h2>
-				<p class="description"></p>
+				<p class="description">
+				</p>
 				<ul class="icons center margin-fix">
 					<li><a href="#" target="_blank" class="icon brands fa-github" data-toggle="tooltip"
 							data-placement="left" title="GitHub Link"><span class="label">GitHub
@@ -269,8 +274,7 @@
 		// import {projects} from "./assets/group_infos/csvjson.js"
 
 		var org = "COS301-SE-2023";
-		
-		
+    
 		// **********
 		// Logic
 		// ********** 
@@ -280,6 +284,7 @@
 		for (var i = 0; i < projects.length; i++) {
 			template.find(".name").html(projects[i].name);
 			template.find(".team").html(projects[i].team);
+			
 			template.find(".description").html(projects[i].description);
 			template.find(".logo").attr("src", "images/fulls/"+projects[i].logo+".png");
 			template.find(".logo_link").attr("href", "images/fulls/"+projects[i].logo+".png");
