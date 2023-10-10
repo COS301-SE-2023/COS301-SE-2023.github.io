@@ -30,7 +30,7 @@
 	<!-- <h1 class="center">Please Note: Website under development</h1> -->
 	<img src="images/UP.png" width="350" class="up" />
 	<h1 class="center"> Department of Computer Science </h1>
-	<h1 class="center"> COS 301 Capstone Project's 2023 Landing Page</h1>
+	<h1 class="center"> COS 301 Capstone Project 2023</h1>
 
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -253,6 +253,13 @@
 						<a href="https://www.gendac.co.za/" target="_blank">
 							<img src="images/sponsors/gendac.png" class="card-img-top img-responsive" alt="..." />
 						</a>
+            <ul>
+              <li>Mutual Support</li>
+              <li>Effective Communications and Collaboration</li>
+              <li>Balanced Contributions</li>
+              <li>Feedback and Continuous Improvement</li>
+              <li>Resilience</li>
+            </ul>
 					</div>
 					<div class="card-footer">
 						<p class="card-text"><span><i class="icon solid fa-users"></i> <br />Team-Work Excellence
@@ -268,8 +275,8 @@
               <li>Attention to Non Functional requirements</li>
               <li>Usage of CI/CD and tools within the pipeline(s)</li>
               <li>Applying Observability Principles</li>
-              <li>Operational Practices used</ul>
-            </li>
+              <li>Operational Practices used</li>
+            </ul>
 					</div>
 					<div class="card-footer">
 						<p class="card-text"><span><i class="icon solid fa-terminal"></i> <br />DevOps Adherence
@@ -685,7 +692,24 @@
    "website": "#",
    "video": "#",
    "stall": 22
- }
+ },
+ {
+                "Timestamp": "28/08/2023 10:41:06",
+                "name": "MeetApp",
+                "person_email": "techtitanstuks@gmail.com",
+                "team": "Tech Titans",
+                "client": "EPI-USE",
+                "short_description": "MeetApp is a location-powered, social-networking and event-planning application.. Discover, connect, and share unforgettable moments at conferences, concerts, and meetups.",
+                "description": "MeetApp is a location-powered, social-networking and event-planning application that allows users to discover, attend, and engage with events of all types. With MeetApp, users can browse event listings, RSVP to events, receive notifications about upcoming events, and interact with other attendees through social features such as liking and sharing media content. The app also offers powerful features for event organizers, including the ability to create and manage events, track attendance, and receive feedback from attendees. MeetApp uses machine learning algorithms to recommend events to users based on their location and past attendance, and offers tools for event promotion and sponsorships. Whether you're attending a conference, concert, or meetup, MeetApp provides a comprehensive platform for discovering, planning, and experiencing events like never before.",
+                "github": "https://github.com/COS301-SE-2023/MeetApp",
+                "email": "techtitanstuks@gmail.com",
+                "logo": "meetapp",
+                "team_photo": "https://drive.google.com/open?id=1wuWkcD9IlilEdSAHU87swc0IpNNqvuiP",
+                "client_logo": "epi",
+                "website": "#",
+                "video": "#",
+                "stall": 23
+            },
 ]
 
 
@@ -723,7 +747,7 @@
 			
 			stands.find(".team").html(projects[i].team);
 			stands.find(".project").html(projects[i].name);
-			stands.find(".standNum").html(projects[i].stand);
+			stands.find(".standNum").html(projects[i].stall);
 			$("#stands").append("<tr>"+stands.html()+"</tr>"); 
 			
 		}
