@@ -267,7 +267,7 @@
 				// popupHeight: 150,
 				
 				baseZIndex: 99999,
-				popupLoaderText: 'Loading',
+				popupLoaderText: '',
 				popupSpeed: 300,
 				popupWidth: 150,
 				selector: '.thumb > a.image',
